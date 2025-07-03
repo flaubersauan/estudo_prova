@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>🎉 Bem-vindo ao Dashboard!{{nome}}</h2>
+
+<p>
+  <a href="{{ url_for('listar_produtos') }}">🛍 Ver Produtos Disponíveis</a>
+</p>
+
+<p>
+  <a href="{{ url_for('ver_carrinho') }}">🧺 Ver Carrinho</a>
+</p>
+
+<form action="{{ url_for('logout') }}" method="post">
+  <button type="submit">Sair</button>
+</form>
+{% endblock %}

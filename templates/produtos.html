@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>🛍 Produtos</h2>
+
+<ul>
+  {% for produto in produtos %}
+    <li>
+      {{ produto.nome }}
+      <form action="{{ url_for('adicionar_ao_carrinho') }}" method="post" style="display: inline;">
+        <input type="hidden" name="nome" value="{{ produto.nome }}">
+        <button type="submit">Adicionar</button>
+      </form>
+    </li>
+  {% endfor %}
+</ul>
+
+<a href="{{ url_for('ver_carrinho') }}">Ver carrinho</a>
+<a href="{{url_for('dash')}}">Voltar ao dashboard</a>
+{% endblock %}
