@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+    <title>
+        {% block title %}
+            templates
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <header>
+        {% block header%}
+            <h1>Os melhores personagens do mundo</h1>
+            <nav> 
+                <a href="{{url_for('register')}}">Registrar personagem</a>
+                <a href="{{url_for('listar_personagens')}}">Listar Personagens</a>
+            </nav>
+           
+        {% endblock %}
+    </header>
+
+    <main>
+        {% block conteudo %}   
+
+        {% endblock %}
+    </main> 
+</body>
+</html>

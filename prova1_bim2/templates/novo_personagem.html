@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block conteudo %}   
+    <h1>Registrar personagem</h1>
+    <form action="{{url_for('register')}}" method="post">
+        <label for="nome_personagem">Nome:</label>
+        <input type="text" name="nome" placeholder="Nome">
+        <label for="jogo_origem"></label>
+        <label for="jogo_origem">Jogo origem: </label>
+        <input type="text" name="jogo_origem" placeholder="Jogo origem">
+        <label for="habilidade_principal">Habilidade Principal: </label>
+        <input type="text" name="habilidade_principal" placeholder="Habilidade principal">
+        <button type="submit">Enviar</button>
+    </form>           
+{% endblock %}

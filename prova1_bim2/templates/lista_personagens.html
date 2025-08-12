@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h2>Lista de Personagens</h2>
+
+{% if personagens %}
+<ul>
+    {% for p in personagens %}
+    <li>
+        <strong>{{ p['nome'] }}</strong>  
+        - {{ p['jogo_origem'] }}  
+        ({{ p['habilidade_principal'] }})
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Nenhum personagem cadastrado ainda.</p>
+{% endif %}
+
+{% endblock %}
