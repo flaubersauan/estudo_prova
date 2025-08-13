@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block pagina %}
+    Dashboard
+{% endblock %}
+
+
+{% block conteudo %}
+    
+    <div class="main-content">
+        <h1>Oi, {{current_user.nome}}</h1>
+        <form action="{{ url_for('logout') }}" method="post">
+        <button type="submit">Sair</button>
+</form>
+
+    </div>  
+    
+{% endblock %}
