@@ -2,11 +2,6 @@ from flask import *
 import sqlite3
 app = Flask(__name__)
 
-def conexao():
-    conexao = sqlite3.connect('jogo.db')
-    conexao.row_factory = sqlite3.Row
-    return conexao 
-
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -56,3 +51,4 @@ def listar_personagens():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
